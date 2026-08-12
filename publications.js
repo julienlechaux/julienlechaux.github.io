@@ -1,8 +1,8 @@
 window.PUBLICATIONS = [
   {
     type: "preprint",
-    title: "Title of your preprint",
-    authors: "Julien Lechaux, Coauthor",
+    title: "Long-time dynamics for the magnetic Schrödinger equation on the torus",
+    authors: "Julien Lechaux",
     year: "2026",
     journal: "",
     note: "Preprint",
