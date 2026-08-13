@@ -21,11 +21,4 @@ window.SITE_DATA = {
     arxiv: "#",
     github: "#"
   },
-
-  news: [
-    {
-      year: "2026",
-      text: "Personal webpage launched."
-    }
-  ]
 };
