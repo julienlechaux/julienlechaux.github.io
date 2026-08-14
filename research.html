@@ -1,91 +1,392 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Personal academic webpage of Julien Lechaux, PhD student in mathematics.">
+
+  <meta
+    name="description"
+    content="Research interests and publications of Julien Lechaux, PhD student in mathematics at Nantes Université."
+  >
+
   <title>Research — Julien Lechaux</title>
+
   <link rel="stylesheet" href="assets/style.css">
 </head>
+
+
 <body>
+
 <div class="site-shell">
 
-<header class="site-header">
-  <div class="header-inner">
-    <a class="brand" href="index.html" data-site-name>Julien Lechaux</a>
-    <nav aria-label="Main navigation">
-      <a href="index.html" class="">Home</a>
-      <a href="research.html" class="active">Research</a>
-      <a href="publications.html" class="">Publications</a>
-      <a href="teaching.html" class="">Teaching</a>
-      <a href="assets/CV_Julien_Lechaux.pdf" data-cv>CV</a>
-    </nav>
-  </div>
-</header>
 
-<main>
+  <!-- Header -->
 
-<section class="page-intro">
-  <p class="eyebrow">Research</p>
-  <h1>Research</h1>
-  <p>
-    My work lies at the interface of semiclassical analysis, microlocal analysis
-    and quantum dynamics, with a particular focus on magnetic Schrödinger operators.
-  </p>
-</section>
+  <header class="site-header">
 
-<section class="research-grid">
-  <article class="research-card">
-    <p class="eyebrow">01</p>
-    <h3>Semiclassical analysis</h3>
-    <p>
-      Semiclassical measures, high-frequency asymptotics and long-time quantum dynamics.
-    </p>
-  </article>
+    <div class="header-inner">
 
-  <article class="research-card">
-    <p class="eyebrow">02</p>
-    <h3>Magnetic Schrödinger operators</h3>
-    <p>
-      Semiclassical and spectral properties of magnetic quantum systems.
-    </p>
-  </article>
+      <a
+        class="brand"
+        href="index.html"
+        data-site-name
+      >
+        Julien Lechaux
+      </a>
 
-  <article class="research-card">
-    <p class="eyebrow">03</p>
-    <h3>Microlocal dynamics</h3>
-    <p>
-      Microlocal and two-microlocal analysis of resonances, propagation and equidistribution.
-    </p>
-  </article>
-</section>
+      <nav aria-label="Main navigation">
 
-<section class="section section-rule">
-  <h2>Current themes</h2>
-  <p class="lead" style="margin-top:0">
-    Magnetic perturbations, semiclassical measures on the torus, long-time
-    Schrödinger dynamics, resonances and spectral asymptotics.
-  </p>
-</section>
+        <a href="index.html">
+          Home
+        </a>
 
-</main>
+        <a
+          href="research.html"
+          class="active"
+        >
+          Research
+        </a>
 
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div>© <span data-year></span> <span data-site-name>Julien Lechaux</span></div>
-    <div>
-      <a href="mailto:julien.lechaux@example.com" data-email>Email</a>
-      &nbsp;·&nbsp;
-      <a href="#" data-hal>HAL</a>
-      &nbsp;·&nbsp;
-      <a href="#" data-arxiv>arXiv</a>
+        <a href="teaching.html">
+          Teaching
+        </a>
+
+        <a
+          href="assets/CV_Julien_Lechaux.pdf"
+          data-cv
+        >
+          CV
+        </a>
+
+      </nav>
+
     </div>
-  </div>
-</footer>
+
+  </header>
+
+
+
+  <!-- Main content -->
+
+  <main>
+
+
+    <!-- Introduction -->
+
+    <section class="page-intro">
+
+      <p class="eyebrow">
+        Research
+      </p>
+
+      <h1>
+        Research
+      </h1>
+
+      <p>
+        My research lies at the interface of semiclassical analysis,
+        microlocal analysis and quantum dynamics, with a particular
+        interest in magnetic Schrödinger operators.
+      </p>
+
+    </section>
+
+
+
+    <!-- Research interests -->
+
+    <section class="research-grid">
+
+      <article class="research-card">
+
+        <p class="eyebrow">
+          01
+        </p>
+
+        <h3>
+          Semiclassical analysis
+        </h3>
+
+        <p>
+          Semiclassical measures, high-frequency asymptotics
+          and long-time quantum dynamics.
+        </p>
+
+      </article>
+
+
+      <article class="research-card">
+
+        <p class="eyebrow">
+          02
+        </p>
+
+        <h3>
+          Magnetic Schrödinger operators
+        </h3>
+
+        <p>
+          Semiclassical and spectral properties of quantum systems
+          in the presence of magnetic fields.
+        </p>
+
+      </article>
+
+
+      <article class="research-card">
+
+        <p class="eyebrow">
+          03
+        </p>
+
+        <h3>
+          Microlocal dynamics
+        </h3>
+
+        <p>
+          Microlocal and two-microlocal analysis of propagation,
+          resonances and equidistribution phenomena.
+        </p>
+
+      </article>
+
+    </section>
+
+
+
+    <!-- Current research themes -->
+
+    <section class="section section-rule">
+
+      <h2>
+        Current themes
+      </h2>
+
+      <p
+        class="lead"
+        style="margin-top: 0;"
+      >
+        Magnetic perturbations, semiclassical measures on the torus,
+        long-time Schrödinger dynamics, resonances and spectral asymptotics.
+      </p>
+
+    </section>
+
+
+
+    <!-- Publications -->
+
+    <section class="section section-rule">
+
+      <p class="eyebrow">
+        Research output
+      </p>
+
+      <h2>
+        Publications &amp; Preprints
+      </h2>
+
+      <div id="preprints" class="publications-list"></div>
+
+      <div
+        id="published-papers"
+        class="publications-list"
+      ></div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- Footer -->
+
+  <footer class="site-footer">
+
+    <div class="footer-inner">
+
+      <div>
+        © <span data-year></span>
+        <span data-site-name>Julien Lechaux</span>
+      </div>
+
+      <div>
+
+        <a
+          href="mailto:julien.lechaux@example.com"
+          data-email
+        >
+          Email
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
 
 </div>
+
+
+
+<!-- Site data -->
+
 <script src="site-data.js"></script>
 <script src="assets/site.js"></script>
 
+
+<!-- Publications data -->
+
+<script src="publications.js"></script>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const items = window.PUBLICATIONS || [];
+
+
+  function renderPublication(item) {
+
+    const links = Object.entries(item.links || {})
+
+      .filter(([_, value]) => value && value !== "#")
+
+      .map(([label, value]) => `
+        <a href="${value}">
+          ${label.toUpperCase()}
+        </a>
+      `)
+
+      .join("");
+
+
+    const tags = (item.tags || [])
+
+      .map(tag => `
+        <span>${tag}</span>
+      `)
+
+      .join("");
+
+
+    return `
+
+      <article class="publication">
+
+        <h3 class="publication-title">
+          ${item.title}
+        </h3>
+
+        <p class="publication-meta">
+          ${item.authors}
+        </p>
+
+        <p class="publication-meta">
+
+          ${item.journal
+            ? item.journal + " · "
+            : ""
+          }
+
+          ${item.year}
+
+          ${item.note
+            ? " · " + item.note
+            : ""
+          }
+
+        </p>
+
+
+        ${
+          links
+          ? `<div class="pub-links">${links}</div>`
+          : ""
+        }
+
+
+        ${
+          tags
+          ? `<div class="pub-tags">${tags}</div>`
+          : ""
+        }
+
+      </article>
+
+    `;
+
+  }
+
+
+  const preprints =
+    items.filter(item => item.type === "preprint");
+
+
+  const publications =
+    items.filter(item => item.type === "publication");
+
+
+  const preprintContainer =
+    document.getElementById("preprints");
+
+
+  const publicationsContainer =
+    document.getElementById("published-papers");
+
+
+  if (preprints.length > 0) {
+
+    preprintContainer.innerHTML = `
+
+      <h3 style="margin-top: 0;">
+        Preprints
+      </h3>
+
+      ${preprints.map(renderPublication).join("")}
+
+    `;
+
+  }
+
+
+  if (publications.length > 0) {
+
+    publicationsContainer.innerHTML = `
+
+      <h3 style="margin-top: 40px;">
+        Published papers
+      </h3>
+
+      ${publications.map(renderPublication).join("")}
+
+    `;
+
+  }
+
+
+  if (
+    preprints.length === 0 &&
+    publications.length === 0
+  ) {
+
+    preprintContainer.innerHTML = `
+      <p class="publication-meta">
+        Publications and preprints will appear here.
+      </p>
+    `;
+
+  }
+
+});
+
+</script>
+
+
 </body>
+
 </html>
