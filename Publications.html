@@ -8,10 +8,10 @@
 
   <meta
     name="description"
-    content="Research interests and publications of Julien Lechaux, PhD student in mathematics at Nantes Université."
+    content="Publications and preprints of Julien Lechaux, PhD student in mathematics at Nantes Université."
   >
 
-  <title>Research — Julien Lechaux</title>
+  <title>Publications — Julien Lechaux</title>
 
   <link rel="stylesheet" href="assets/style.css">
 </head>
@@ -43,10 +43,10 @@
         </a>
 
         <a
-          href="research.html"
+          href="publications.html"
           class="active"
         >
-          Research
+          Publications
         </a>
 
         <a href="teaching.html">
@@ -73,38 +73,26 @@
   <main>
 
 
-    <!-- Introduction -->
+    <!-- Page title -->
 
     <section class="page-intro">
 
-      <h1>
-        Research
-      </h1>
-
-      <p>
-        My research lies at the interface of semiclassical analysis,
-        microlocal analysis and quantum dynamics, with a particular
-        interest in magnetic Schrödinger operators.
-      </p>
+      <h1>Publications</h1>
 
     </section>
 
 
-    <!-- Current research themes -->
 
-    <section class="section section-rule">
+    <!-- Preprints -->
 
-      <h2>
-        Current themes
-      </h2>
+    <section>
 
-      <p
-        class="lead"
-        style="margin-top: 0;"
-      >
-        Magnetic perturbations, semiclassical measures on the torus,
-        long-time Schrödinger dynamics, resonances and spectral asymptotics.
-      </p>
+      <h2>Preprints</h2>
+
+      <div
+        id="preprints"
+        class="publications-list"
+      ></div>
 
     </section>
 
@@ -114,15 +102,7 @@
 
     <section class="section section-rule">
 
-      <p class="eyebrow">
-        Research output
-      </p>
-
-      <h2>
-        Publications &amp; Preprints
-      </h2>
-
-      <div id="preprints" class="publications-list"></div>
+      <h2>Publications</h2>
 
       <div
         id="published-papers"
@@ -170,12 +150,15 @@
 <!-- Site data -->
 
 <script src="site-data.js"></script>
+
 <script src="assets/site.js"></script>
+
 
 
 <!-- Publications data -->
 
 <script src="publications.js"></script>
+
 
 <script>
 
@@ -199,15 +182,6 @@ document.addEventListener("DOMContentLoaded", () => {
       .join("");
 
 
-    const tags = (item.tags || [])
-
-      .map(tag => `
-        <span>${tag}</span>
-      `)
-
-      .join("");
-
-
     return `
 
       <article class="publication">
@@ -216,20 +190,24 @@ document.addEventListener("DOMContentLoaded", () => {
           ${item.title}
         </h3>
 
+
         <p class="publication-meta">
           ${item.authors}
         </p>
 
+
         <p class="publication-meta">
 
-          ${item.journal
+          ${
+            item.journal
             ? item.journal + " · "
             : ""
           }
 
           ${item.year}
 
-          ${item.note
+          ${
+            item.note
             ? " · " + item.note
             : ""
           }
@@ -240,13 +218,6 @@ document.addEventListener("DOMContentLoaded", () => {
         ${
           links
           ? `<div class="pub-links">${links}</div>`
-          : ""
-        }
-
-
-        ${
-          tags
-          ? `<div class="pub-tags">${tags}</div>`
           : ""
         }
 
@@ -265,56 +236,12 @@ document.addEventListener("DOMContentLoaded", () => {
     items.filter(item => item.type === "publication");
 
 
-  const preprintContainer =
-    document.getElementById("preprints");
+  document.getElementById("preprints").innerHTML =
+    preprints.map(renderPublication).join("");
 
 
-  const publicationsContainer =
-    document.getElementById("published-papers");
-
-
-  if (preprints.length > 0) {
-
-    preprintContainer.innerHTML = `
-
-      <h3 style="margin-top: 0;">
-        Preprints
-      </h3>
-
-      ${preprints.map(renderPublication).join("")}
-
-    `;
-
-  }
-
-
-  if (publications.length > 0) {
-
-    publicationsContainer.innerHTML = `
-
-      <h3 style="margin-top: 40px;">
-        Published papers
-      </h3>
-
-      ${publications.map(renderPublication).join("")}
-
-    `;
-
-  }
-
-
-  if (
-    preprints.length === 0 &&
-    publications.length === 0
-  ) {
-
-    preprintContainer.innerHTML = `
-      <p class="publication-meta">
-        Publications and preprints will appear here.
-      </p>
-    `;
-
-  }
+  document.getElementById("published-papers").innerHTML =
+    publications.map(renderPublication).join("");
 
 });
 
