@@ -11,7 +11,7 @@ window.PUBLICATIONS = [
       arxiv: "#",
       journal: ""
     },
-    tags: ["Semiclassical analysis", "Magnetic Schrödinger operators"]
+    tags: ["Semiclassical analysis", "Semiclassical measures", "Magnetic Schrödinger operators"]
   }
 ];
 
