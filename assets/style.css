@@ -459,11 +459,10 @@ h3 {
 }
 .talks-list {
   padding-left: 1.4rem;
-  margin-top: 24px;
+  margin-top: 16px;
 }
 
 .talks-list li {
-  margin-bottom: 18px;
-  padding-left: 8px;
+  margin-bottom: 6px;
+  padding-left: 6px;
 }
-
