@@ -168,77 +168,59 @@ document.addEventListener("DOMContentLoaded", () => {
   const items = window.PUBLICATIONS || [];
 
 
-  function renderPublication(item) {
+  ffunction renderPublication(item) {
 
-    const links = Object.entries(item.links || {})
-
-      .filter(([_, value]) => value && value !== "#")
-
-      .map(([label, value]) => `
-        <a href="${value}">
-          ${label.toUpperCase()}
-        </a>
-      `)
-
-      .join("");
-
-    const tags = (item.tags || [])
-  .map(tag => `
-    <span>${tag}</span>
-  `)
-  .join("");
+  const links = Object.entries(item.links || {})
+    .filter(([_, value]) => value && value !== "#")
+    .map(([label, value]) => `
+      <a href="${value}">
+        ${label.toUpperCase()}
+      </a>
+    `)
+    .join("");
 
 
-    return `
-
-      <article class="publication">
-
-        <h3 class="publication-title">
-          ${item.title}
-        </h3>
+  const tags = (item.tags || [])
+    .map(tag => `
+      <span>${tag}</span>
+    `)
+    .join("");
 
 
-        <p class="publication-meta">
-          ${item.authors}
-        </p>
+  return `
 
+    <article class="publication">
 
-        <p class="publication-meta">
+      <h3 class="publication-title">
+        ${item.title}
+      </h3>
 
-          ${
-            item.journal
-            ? item.journal + " · "
-            : ""
-          }
+      <p class="publication-meta">
+        ${item.authors}
+      </p>
 
-          ${item.year}
+      <p class="publication-meta">
+        ${item.journal ? item.journal + " · " : ""}
+        ${item.year}
+        ${item.note ? " · " + item.note : ""}
+      </p>
 
-          ${
-            item.note
-            ? " · " + item.note
-            : ""
-          }
+      ${
+        links
+        ? `<div class="pub-links">${links}</div>`
+        : ""
+      }
 
-        </p>
+      ${
+        tags
+        ? `<div class="pub-tags">${tags}</div>`
+        : ""
+      }
 
+    </article>
 
-        ${
-          links
-          ? `<div class="pub-links">${links}</div>`
-          : ""
-        }
-
-        ${
-  tags
-  ? `<div class="pub-tags">${tags}</div>`
-  : ""
+  `;
 }
-
-      </article>
-
-    `;
-
-  }
 
 
   const preprints =
