@@ -7,7 +7,7 @@ window.PUBLICATIONS = [
     journal: "",
     note: "Preprint",
     links: {
-      pdf: "#",
+      pdf: "assets/papers/lechaux_magnetic_schrodinger.pdf",
       arxiv: "#",
       journal: ""
     },
