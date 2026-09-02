@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const items = window.PUBLICATIONS || [];
 
 
-  ffunction renderPublication(item) {
+  function renderPublication(item) {
 
   const links = Object.entries(item.links || {})
     .filter(([_, value]) => value && value !== "#")
