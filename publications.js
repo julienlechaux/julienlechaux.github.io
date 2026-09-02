@@ -6,12 +6,12 @@ window.PUBLICATIONS = [
     year: "2026",
     journal: "",
     note: "Preprint",
+
     links: {
       pdf: "assets/papers/Long-time_dynamics_magnetic_Schrodinger_torus.pdf",
-      arxiv: "#",
-      journal: ""
-    },
-    tags: ["Semiclassical analysis", "Semiclassical measures", "Magnetic Schrödinger operators"]
+      arxiv: "",
+      hal: ""
+    }
   }
 ];
 
