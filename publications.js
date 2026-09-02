@@ -7,7 +7,7 @@ window.PUBLICATIONS = [
     journal: "",
     note: "Preprint",
     links: {
-      pdf: "assets/papers/Long-time dynamics for the magnetic Schrödinger equation on the torus.pdf",
+      pdf: "assets/papers/Long-time_dynamics_magnetic_Schrodinger_torus.pdf",
       arxiv: "#",
       journal: ""
     },
