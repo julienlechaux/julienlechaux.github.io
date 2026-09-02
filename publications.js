@@ -1,17 +1,28 @@
 window.PUBLICATIONS = [
   {
     type: "preprint",
+
     title: "Long-time dynamics for the magnetic Schrödinger equation on the torus",
+
     authors: "Julien Lechaux",
+
     year: "2026",
+
     journal: "",
+
     note: "Preprint",
 
     links: {
       pdf: "assets/papers/Long-time_dynamics_magnetic_Schrodinger_torus.pdf",
       arxiv: "",
       hal: ""
-    }
+    },
+
+    tags: [
+      "Semiclassical analysis",
+      "Magnetic Schrödinger operators",
+      "Long-time dynamics"
+    ]
   }
 ];
 
