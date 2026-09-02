@@ -182,6 +182,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
       .join("");
 
+    const tags = (item.tags || [])
+  .map(tag => `
+    <span>${tag}</span>
+  `)
+  .join("");
+
 
     return `
 
@@ -221,6 +227,12 @@ document.addEventListener("DOMContentLoaded", () => {
           ? `<div class="pub-links">${links}</div>`
           : ""
         }
+
+        ${
+  tags
+  ? `<div class="pub-tags">${tags}</div>`
+  : ""
+}
 
       </article>
 
