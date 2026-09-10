@@ -2,7 +2,7 @@ window.SITE_DATA = {
   name: "Julien Lechaux",
   role: "PhD student in Mathematics",
   institution: "Laboratoire de Mathématiques Jean Leray — Nantes Université",
-  email: "julien.lechaux@example.com",
+  email: "julien.lechaux@univ-nantes.fr",
 
   intro:
     "I am a PhD student working in semiclassical and microlocal analysis, with a particular interest in magnetic Schrödinger operators, quantum dynamics and spectral theory.",
